@@ -1,0 +1,23 @@
+schema_version: "1.0"
+risks:
+  - id: AUTH-001
+    title: "PDS 未公开内部接口的稳定性与支持边界"
+    status: "risk_accepted_by_user"
+    production_blocker: false
+    mitigation: "用户已明确授权直接使用；保留接口契约测试、保存前项目身份校验和提交人工确认"
+  - id: MODEL-001
+    title: "第三方中转模型的数据处理边界"
+    status: "risk_accepted_by_user"
+    production_blocker: false
+    mitigation: "用户已明确授权直接使用；仅向模型发送明确标记为不保密的项目材料，API Key 仅保存在本地 .env"
+  - id: DATA-001
+    title: "永久留存缺少备份、恢复和删除制度"
+    status: "parked"
+    production_blocker: false
+    mitigation: "当前由单机用户承担风险，正式部署前重新评估"
+  - id: TEST-001
+    title: "实战项目必须逐项通过安全闸门"
+    status: "runtime_enforced"
+    production_blocker: false
+    mitigation: "每次精确核对项目编号、待计划编制状态、保密状态和附件身份；STS1260215 的不匹配附件仍仅限异常样本，禁止生成或写入"
+

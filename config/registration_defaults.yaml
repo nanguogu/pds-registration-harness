@@ -1,0 +1,43 @@
+schema_version: "1.0"
+
+pds:
+  base_url: "https://pds.pd-sts.com"
+  write_drafts_enabled: true
+  submit_enabled: false
+
+registration_plan:
+  test_specification: "STS-QI-41-V2.0《软件产品登记测试规范》"
+  test_method_labels:
+    - "黑盒测试"
+    - "文档检查"
+  test_method_other: ""
+  criteria:
+    - "GB/T 25000.51-2016《系统与软件工程 系统与软件质量要求和评价（SQuaRE） 第51部分：就绪可用软件产品（RUSP）的质量要求和测试细则》"
+  onsite_option_label: "本实验室测试"
+  default_supervisors:
+    - "/"
+  default_customers:
+    - "/"
+  default_test_places:
+    - "本实验室"
+  leave_test_dates_empty: true
+
+cloud_policy:
+  enabled: true
+  allowed_confidentiality_value: "不保密"
+  unresolved_reason: "用户已于 2026-11-11 明确授权直接使用本地 .env 中配置的第三方模型；保密项目仍禁止发送"
+
+storage:
+  requested_archive_root: "D:/myfiles/test_job"
+  retention: "permanent"
+  backup_policy_resolved: false
+
+validation:
+  minimum_confidence: 0.60
+  prohibited_phrases:
+    - "正常"
+    - "正确"
+    - "成功"
+    - "通过"
+    - "符合要求"
+
